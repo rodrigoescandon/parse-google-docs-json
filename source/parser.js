@@ -33,8 +33,8 @@ function cleanText(text) {
 }
 
 function getNestedListIndent(level, listTag) {
-  const indentType = listTag === "ol" ? "1." : "-";
-  return `${_repeat("  ", level)}${indentType} `;
+  const indentType = listTag === "ol" ? "1." : "*";
+  return `${_repeat("&nbsp;&nbsp;", level)}${indentType} `;
 }
 
 function getTextFromParagraph(p) {
