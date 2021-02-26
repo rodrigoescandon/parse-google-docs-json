@@ -94,8 +94,9 @@ function getText(element, { isHeader = false } = {}) {
     italic,
   } = element.textRun.textStyle;
 
-  text = text.replace(/\*/g, "\\*");
-  text = text.replace(/_/g, "\\_");
+  // Podio hack: don't escape asterisks and underscores
+  // text = text.replace(/\*/g, "\\*");
+  // text = text.replace(/_/g, "\\_");
 
   if (underline) {
     // Underline isn't supported in markdown so we'll use emphasis
